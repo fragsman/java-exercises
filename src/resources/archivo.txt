@@ -1,0 +1,1 @@
+Este es un archivo en el cual se pueden encontrar varias palabras a ser buscaas por el propio programa que vaya a leerlas. Me parece que no tiene otro objetivo además de ese. Saludos cordiales.

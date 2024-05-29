@@ -15,6 +15,8 @@ After cloning this, in order to execute you need to send at least 1 parameter. Y
 11. Find duplicates
 12. Binary search algorithm
 13. Merge Sort algorithm
+14. Print two array of numbers with different formats
+15. Find the second largest number in an array
 
 ▶️ The values to be used as input for every exercise such as Strings, Numbers, Objects and Arrays of previous values are already hardcoded inside each one of the methods.
 
