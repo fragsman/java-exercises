@@ -4,37 +4,37 @@ After cloning this, in order to execute it you will be prompted with instruction
 
 ⚠️ The main program will read from this file to present the list of exercises to be chosen from. Thus, the format of this file is important. Modifying it will cause the program not to be able to run.
 
-+Algorithm Exercises
+## +Algorithm Exercises
 1. Binary search algorithm
 2. Merge Sort algorithm
 
-+File Exercises
+## +File Exercises
 1. Find a specific word within a file
 
-+Math Exercises
+## +Math Exercises
 1. Find if a number is Prime
 2. Create a Fibonacci sequence using recursion
 3. Check if all the numbers in the array are only odds
 
-+Object Exercises
+## +Object Exercises
 1. Sort objects using the Comparable interface
 
-+Search Exercises
+## +Search Exercises
 1. Find the first non-repeated letter
 2. Find duplicates
 3. Find the second largest number in an array
 
-+String Exercises
+## +String Exercises
 1. Check if a URl is Valid using Regex 
 2. Check if the word is palindrome (_capicua_)
 3. Revert a String 
 4. Remove whitespaces from string 
 5. Find if there is a Vowel
 
-+Structure Exercises
+## +Structure Exercises
 1. Order a map
 
-+Visual Exercises
+## +Visual Exercises
 1. Print two array of numbers forming pyramids
 
 
