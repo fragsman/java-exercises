@@ -15,6 +15,7 @@ public class VisualExerciseHandler extends ExerciseHandler{
         switch (exNumber) {
             case 1:
                 VisualExercises.projectEgypt();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

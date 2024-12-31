@@ -15,6 +15,7 @@ public class ObjectExerciseHandler extends ExerciseHandler{
         switch(exNumber) {
             case 1:
                 ObjectExercises.sortPeople();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

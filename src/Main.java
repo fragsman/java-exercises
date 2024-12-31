@@ -44,6 +44,8 @@ public class Main {
             case 8:
                 VisualExerciseHandler.handle();
                 break;
+            default:
+                System.out.println("Invalid argument");
         }
     }
 }

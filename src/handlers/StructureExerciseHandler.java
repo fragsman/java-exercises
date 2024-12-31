@@ -15,6 +15,7 @@ public class StructureExerciseHandler extends ExerciseHandler{
         switch (exNumber) {
             case 1:
                 StructureExercises.orderAMap();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

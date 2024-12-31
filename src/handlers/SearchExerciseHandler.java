@@ -21,6 +21,7 @@ public class SearchExerciseHandler extends ExerciseHandler{
                 break;
             case 3:
                 SearchExercises.secondLargestNumber();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

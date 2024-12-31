@@ -15,6 +15,7 @@ public class FileExerciseHandler extends ExerciseHandler{
         switch (exNumber) {
             case 1:
                 FileExercises.findWordInFile();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

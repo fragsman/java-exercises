@@ -21,6 +21,7 @@ public class AlgorithmExerciseHandler extends ExerciseHandler{
                 int[] numbers = {38, 27, 43, 10, 50};
                 int[] sortedNumbers = AlgorithmExercises.mergeSort(numbers);
                 System.out.println(Arrays.toString(numbers) + " sorted by Merge-Sort: " + Arrays.toString(sortedNumbers));
+                break;
             default:
                 System.out.println("Invalid argument");
         }

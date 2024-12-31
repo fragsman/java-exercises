@@ -1,22 +1,42 @@
 # java-exercises
 ▶️ This repo contains several common algorithmic exercises requested for interviews, also useful for java practice
-After cloning this, in order to execute you need to send at least 1 parameter. You can send more than one separated by space. Parameters are just numbers and will define which of the following exercise will run:
+After cloning this, in order to execute it you will be prompted with instructions to choose first an exercise type and then a list of exercises available for the exercise type previously chosen.
 
-1. Revert a String
-2. Find if there is a Vowel
-3. Check if a URl is Valid using Regex
-4. Find if a number is Prime
-5. Find the first non-repeated letter
-6. Create a Fibonacci sequence using recursion
-7. Check if all the numbers in the array are only odds
-8. Check if the word is palindrome (_capicua_)
-9. Remove whitespaces from string
-10. Sort objects using the Comparable interface
-11. Find duplicates
-12. Binary search algorithm
-13. Merge Sort algorithm
-14. Print two array of numbers with different formats
-15. Find the second largest number in an array
+⚠️ The main program will read from this file to present the list of exercises to be chosen from. Thus, the format of this file is important. Modifying it will cause the program not to be able to run.
 
-▶️ The values to be used as input for every exercise such as Strings, Numbers, Objects and Arrays of previous values are already hardcoded inside each one of the methods.
++Algorithm Exercises
+1. Binary search algorithm
+2. Merge Sort algorithm
+
++File Exercises
+1. Find a specific word within a file
+
++Math Exercises
+1. Find if a number is Prime
+2. Create a Fibonacci sequence using recursion
+3. Check if all the numbers in the array are only odds
+
++Object Exercises
+1. Sort objects using the Comparable interface
+
++Search Exercises
+1. Find the first non-repeated letter
+2. Find duplicates
+3. Find the second largest number in an array
+
++String Exercises
+1. Check if a URl is Valid using Regex 
+2. Check if the word is palindrome (_capicua_)
+3. Revert a String 
+4. Remove whitespaces from string 
+5. Find if there is a Vowel
+
++Structure Exercises
+1. Order a map
+
++Visual Exercises
+1. Print two array of numbers forming pyramids
+
+
++▶️ The values to be used as input for some of the exercises such as Strings, Numbers, Objects and Arrays of previous values are already hardcoded inside each one of the methods.
 
