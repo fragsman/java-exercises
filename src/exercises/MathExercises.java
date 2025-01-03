@@ -56,12 +56,9 @@ public class MathExercises {
     }
 
     public static String resolvePolishNotation(String[] expression){
-        String item;
         int res, operator1, operator2;
         Stack<String> auxStack = new Stack<>();
-        Stack<String> stackedExpression = stackTheArrayInReverse(expression);
-        while(!stackedExpression.isEmpty()){
-            item = stackedExpression.pop();
+        for(String item : expression){
             if(item.matches("[+\\-*/]")) {
                 operator2 = Integer.parseInt(auxStack.pop());
                 operator1 = Integer.parseInt(auxStack.pop());
@@ -72,9 +69,7 @@ public class MathExercises {
                     case "/" -> operator1 / operator2;
                     default -> throw new IllegalStateException("Unexpected value: " + item);
                 };
-                stackedExpression.push(String.valueOf(res));
-                while(!auxStack.isEmpty())
-                    stackedExpression.push(auxStack.pop());
+                auxStack.push(String.valueOf(res));
             }else
                 auxStack.push(item);
         }

@@ -26,11 +26,12 @@ public class MathExerciseHandler extends ExerciseHandler{
                 MathExercises.onlyOdds(new ArrayList<>(Arrays.asList(1, 3, 5, 7)));
                 break;
             case 4:
+                //String[] expression = new String[]{"3","4","*"};//result=12
+                //String[] expression = new String[]{"3","4","+","5","6","+","*"};//result=77
                 String[] expression = new String[]{"4","2","5","*","+","1","3","2","*","+","/"};//result2
                 System.out.println("Eval: Reverse Polish Notation for:");
                 printStringArray(expression);
-                //String[] expression = new String[]{"3","4","+","5","6","+","*"};//result=77
-                //String[] expression = new String[]{"3","4","*"};//result=12
+
                 System.out.println("Result: "+MathExercises.resolvePolishNotation(expression));
                 break;
             default:
