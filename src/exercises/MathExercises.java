@@ -2,6 +2,8 @@ package exercises;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
 
 public class MathExercises {
 
@@ -51,5 +53,40 @@ public class MathExercises {
             System.out.println(" contains only odds");
         else
             System.out.println(" doesn't contains only odds");
+    }
+
+    public static String resolvePolishNotation(String[] expression){
+        String item;
+        int res, operator1, operator2;
+        Stack<String> auxStack = new Stack<>();
+        Stack<String> stackedExpression = stackTheArrayInReverse(expression);
+        while(!stackedExpression.isEmpty()){
+            item = stackedExpression.pop();
+            if(item.matches("[+\\-*/]")) {
+                operator2 = Integer.parseInt(auxStack.pop());
+                operator1 = Integer.parseInt(auxStack.pop());
+                res = switch(item){
+                    case "+" -> operator1 + operator2;
+                    case "-" -> operator1 - operator2;
+                    case "*" -> operator1 * operator2;
+                    case "/" -> operator1 / operator2;
+                    default -> throw new IllegalStateException("Unexpected value: " + item);
+                };
+                stackedExpression.push(String.valueOf(res));
+                while(!auxStack.isEmpty())
+                    stackedExpression.push(auxStack.pop());
+            }else
+                auxStack.push(item);
+        }
+
+        return auxStack.pop();
+    }
+
+    private static Stack<String> stackTheArrayInReverse(String[] arr){
+        Stack<String> stack = new Stack<>();
+        for(int i=arr.length-1; i>=0; i--){
+            stack.push(arr[i]);
+        }
+        return stack;
     }
 }
