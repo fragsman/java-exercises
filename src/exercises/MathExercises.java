@@ -76,12 +76,4 @@ public class MathExercises {
 
         return auxStack.pop();
     }
-
-    private static Stack<String> stackTheArrayInReverse(String[] arr){
-        Stack<String> stack = new Stack<>();
-        for(int i=arr.length-1; i>=0; i--){
-            stack.push(arr[i]);
-        }
-        return stack;
-    }
 }
