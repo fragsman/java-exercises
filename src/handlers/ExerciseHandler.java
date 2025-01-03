@@ -22,17 +22,17 @@ public class ExerciseHandler {
         /*
         Raw content processing:
         I divide the content using the exType titles and keeping the second [1] part
-        Then, again, I divide the content using '+' sign and getting the first [0] part
+        Then, again, I divide the content using '##' style-markup and getting the first [0] part
          */
         String listOfExercises = switch (exType) {
-            case ExerciseType.ALGORITHM -> rawFileContent.split("Algorithm Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.FILE -> rawFileContent.split("File Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.MATH -> rawFileContent.split("Math Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.OBJECT -> rawFileContent.split("Object Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.SEARCH -> rawFileContent.split("Search Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.STRING -> rawFileContent.split("String Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.STRUCTURE -> rawFileContent.split("Structure Exercises")[1].split("\\+")[0].replace("##","");
-            case ExerciseType.VISUAL -> rawFileContent.split("Visual Exercises")[1].split("\\+")[0].replace("##","");
+            case ExerciseType.ALGORITHM -> rawFileContent.split("Algorithm Exercises")[1].split("##")[0];
+            case ExerciseType.FILE -> rawFileContent.split("File Exercises")[1].split("##")[0];
+            case ExerciseType.MATH -> rawFileContent.split("Math Exercises")[1].split("##")[0];
+            case ExerciseType.OBJECT -> rawFileContent.split("Object Exercises")[1].split("##")[0];
+            case ExerciseType.SEARCH -> rawFileContent.split("Search Exercises")[1].split("##")[0];
+            case ExerciseType.STRING -> rawFileContent.split("String Exercises")[1].split("##")[0];
+            case ExerciseType.STRUCTURE -> rawFileContent.split("Structure Exercises")[1].split("##")[0];
+            case ExerciseType.VISUAL -> rawFileContent.split("Visual Exercises")[1].split("##")[0];
         };
 
         System.out.println(listOfExercises);
