@@ -1,7 +1,6 @@
 package exercises;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class StringExercises {
 
@@ -13,6 +12,30 @@ public class StringExercises {
     public static void isAValidUrl(String url) {
         //For testing in regexr.com => (http|https)?:\/\/(www.)?(\w+\.)+com(\.\w+)?(\/\w+)*[\/\w+\.;=]+
         System.out.println("Url: " + url + " is valid: " + url.matches("(http|https)?://(www.)?(\\w+\\.)+com(\\.\\w+)?(/\\w+)*[/\\w+.;=]+"));
+    }
+
+    public static void isIsomorphic(String s, String t){
+        /*
+         * Given two strings s and t, determine if they are isomorphic. Two strings are isomorphic if the characters in s can be replaced to get t.
+         * For example,"egg" and "add" are isomorphic, "foo" and "bar" are not.
+         */
+        System.out.print("S="+s+" and T="+t+" are isomorphic ");
+        if(s.length()!=t.length()){
+            System.out.println("NO");
+        }else{
+            //Maybe, analyze
+            char[] sChars = s.toCharArray();
+            char[] tChars = t.toCharArray();
+            for (int i = 0; i < sChars.length; i++){
+                s=s.replace(sChars[i],tChars[i]);
+            }
+            System.out.print("(replaced S string '"+s+"'): ");
+
+            if(s.equals(t)){
+                System.out.println("YES");
+            }else
+                System.out.println("NO");
+        }
     }
 
     public static void isPalindrome() {

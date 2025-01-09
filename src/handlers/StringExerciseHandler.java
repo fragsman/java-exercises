@@ -31,6 +31,14 @@ public class StringExerciseHandler extends ExerciseHandler{
             case 5:
                 StringExercises.isThereAVowel();
                 break;
+            case 6:
+                StringExercises.isIsomorphic("several","recover");//NO
+                StringExercises.isIsomorphic("several","discard");//NO
+                StringExercises.isIsomorphic("one","two");//YES
+                StringExercises.isIsomorphic("extremely","none");//NO
+                StringExercises.isIsomorphic("paper","title");//YES;
+                StringExercises.isIsomorphic("foo","bar");//NO;
+                break;
             default:
                 System.out.println("Invalid argument");
         }

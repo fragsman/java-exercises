@@ -31,6 +31,7 @@ After cloning this, in order to execute it you will be prompted with instruction
 3. Revert a String 
 4. Remove whitespaces from string 
 5. Find if there is a Vowel
+6. Find if two strings are isometric
 
 ## Structure Exercises
 1. Order a map
