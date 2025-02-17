@@ -1,12 +1,40 @@
 package exercises;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
+
 
 public class MathExercises {
 
+    public static class Interval implements Comparable<Interval> {
+        private int lowerInterval;
+        private int upperInterval;
+
+        public Interval(int lowerInterval, int upperInterval){
+            this.lowerInterval = lowerInterval;
+            this.upperInterval = upperInterval;
+        }
+
+        public int getLowerInterval() {
+            return lowerInterval;
+        }
+        public int getUpperInterval(){
+            return upperInterval;
+        }
+
+        @Override
+        public int compareTo(Interval intervalCompared) {
+            if(this.getLowerInterval() > intervalCompared.getLowerInterval())
+                return 1;
+            else
+                if(this.getLowerInterval() < intervalCompared.getLowerInterval())
+                    return -1;
+            return 0;
+        }
+
+        public void printOnScreen(){
+            System.out.print("["+getLowerInterval() +","+getUpperInterval()+"]");
+        }
+    }
     /**
      * This class will contain mathematical exercises such as
      * knowing if a number is prime, replicating a fibonacci sequence, etc.
@@ -75,5 +103,48 @@ public class MathExercises {
         }
 
         return auxStack.pop();
+    }
+
+    /*
+    * Given a collection of intervals, merge all overlapping intervals.
+    * For example,
+    * Given [1,3],[2,6],[8,10],[15,18],
+    * return [1,6],[8,10],[15,18].
+     */
+    public static void mergeIntervals(){
+        List<Interval> intervals = new ArrayList<>();
+        intervals.add(new Interval(1,3));
+        intervals.add(new Interval(2,6));
+        intervals.add(new Interval(8,10));
+        intervals.add(new Interval(15,18));
+        intervals.add(new Interval(3,4));
+
+        Collections.sort(intervals);
+        System.out.println("Intervals: ");
+        for(Interval interval : intervals)
+            interval.printOnScreen();
+
+        int elements = intervals.size();
+        int i = 0;
+        while(i < elements){
+            Interval leftInterval = intervals.get(i);
+            Interval rightInterval = intervals.get(i+1);
+
+            if(leftInterval.getUpperInterval() > rightInterval.getLowerInterval()){ //overlap
+                if(leftInterval.getUpperInterval() > rightInterval.getUpperInterval()) //rightInterval fits entirely leftInterval, discard it
+                    intervals.remove(rightInterval);
+                else{ //only the adjacent numbers are overlapping, merge them
+                    intervals.remove(leftInterval);
+                    intervals.remove(rightInterval);
+                    Interval mergedInterval = new Interval(leftInterval.getLowerInterval(), rightInterval.getUpperInterval());
+                    intervals.add(i,mergedInterval);
+                }
+            }else
+                elements++;
+        }
+
+        System.out.println("\nMerged Intervals: ");
+        for(Interval interval : intervals)
+            interval.printOnScreen();
     }
 }

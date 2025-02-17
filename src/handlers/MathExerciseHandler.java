@@ -34,6 +34,9 @@ public class MathExerciseHandler extends ExerciseHandler{
 
                 System.out.println("Result: "+MathExercises.resolvePolishNotation(expression));
                 break;
+            case 5:
+                MathExercises.mergeIntervals();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

@@ -16,6 +16,7 @@ After cloning this, in order to execute it you will be prompted with instruction
 2. Create a Fibonacci sequence using recursion
 3. Check if all the numbers in the array are only odds
 4. Returns the result of a Reverse Polish Notation expression
+5. Merge Intervals
 
 ## Object Exercises
 1. Sort objects using the Comparable interface
