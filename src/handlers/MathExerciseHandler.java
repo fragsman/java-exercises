@@ -37,6 +37,12 @@ public class MathExerciseHandler extends ExerciseHandler{
             case 5:
                 MathExercises.mergeIntervals();
                 break;
+            case 6:
+                int[] numbers = new int[]{2,7,11,15};
+                MathExercises.sumOfTwoNumbers(numbers,9);//Expected index1=1, index2=2
+                numbers = new int[]{3,11,15,6};
+                MathExercises.sumOfTwoNumbers(numbers,9);//Expected index1=1, index2=4
+                break;
             default:
                 System.out.println("Invalid argument");
         }

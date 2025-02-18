@@ -17,6 +17,7 @@ After cloning this, in order to execute it you will be prompted with instruction
 3. Check if all the numbers in the array are only odds
 4. Returns the result of a Reverse Polish Notation expression
 5. Merge Intervals
+6. Sum of Two Numbers
 
 ## Object Exercises
 1. Sort objects using the Comparable interface
