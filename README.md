@@ -37,6 +37,7 @@ After cloning this, in order to execute it you will be prompted with instruction
 
 ## Structure Exercises
 1. Order a map
+2. Reverse a linked list
 
 ## Visual Exercises
 1. Print two array of numbers forming pyramids

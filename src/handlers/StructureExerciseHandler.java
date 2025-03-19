@@ -16,6 +16,8 @@ public class StructureExerciseHandler extends ExerciseHandler{
             case 1:
                 StructureExercises.orderAMap();
                 break;
+            case 2:
+                StructureExercises.reverseALinkedList();
             default:
                 System.out.println("Invalid argument");
         }
