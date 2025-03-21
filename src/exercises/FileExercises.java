@@ -1,10 +1,12 @@
 package exercises;
 
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.util.List;
 
+import POJO.AnimalList;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import POJO.Animal;
 public class FileExercises {
 
     /**
@@ -32,5 +34,19 @@ public class FileExercises {
         }
         if(result!=null)
             System.out.println("The file contains the word '"+word+"' = "+result.contains(word));
+    }
+
+    public static void readJsonFile(){
+        String path = "src/resources/archivo_json.json";
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            AnimalList animals = objectMapper.readValue(new File(path), AnimalList.class);
+
+            for(Animal animal : animals.getAnimals()){
+                System.out.println("Name: "+animal.getName() +", Location: "+animal.getLocation()+", Dangerous: "+animal.isDangerous());
+            }
+        }catch(Exception e){
+            System.out.println("Error reading from Json File "+e);
+        }
     }
 }

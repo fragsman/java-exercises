@@ -16,6 +16,9 @@ public class FileExerciseHandler extends ExerciseHandler{
             case 1:
                 FileExercises.findWordInFile();
                 break;
+            case 2:
+                FileExercises.readJsonFile();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

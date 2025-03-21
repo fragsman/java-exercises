@@ -10,6 +10,7 @@ After cloning this, in order to execute it you will be prompted with instruction
 
 ## File Exercises
 1. Find a specific word within a file
+2. Read a JSON file
 
 ## Math Exercises
 1. Find if a number is Prime

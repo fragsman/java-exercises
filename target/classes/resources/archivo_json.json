@@ -1,0 +1,19 @@
+{
+  "animals" : [
+    {
+      "name" : "Giraffe",
+      "location" : "Africa",
+      "dangerous" : false
+    },
+    {
+      "name" : "Whale",
+      "location" : "Sea",
+      "dangerous" : false
+    },
+    {
+      "name" : "Snake",
+      "location" : "Brazil",
+      "dangerous" : true
+    }
+  ]
+}
