@@ -35,10 +35,12 @@ After cloning this, in order to execute it you will be prompted with instruction
 4. Remove whitespaces from string 
 5. Find if there is a Vowel
 6. Find if two strings are isometric
+7. Sum characters
 
 ## Structure Exercises
 1. Order a map
 2. Reverse a linked list
+3. Find farmable land
 
 ## Visual Exercises
 1. Print two array of numbers forming pyramids

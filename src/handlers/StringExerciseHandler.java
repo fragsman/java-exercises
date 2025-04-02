@@ -39,6 +39,9 @@ public class StringExerciseHandler extends ExerciseHandler{
                 StringExercises.isIsomorphic("paper","title");//YES;
                 StringExercises.isIsomorphic("foo","bar");//NO;
                 break;
+            case 7:
+                StringExercises.sumCharacters("Fede");
+                break;
             default:
                 System.out.println("Invalid argument");
         }

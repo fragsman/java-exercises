@@ -18,6 +18,10 @@ public class StructureExerciseHandler extends ExerciseHandler{
                 break;
             case 2:
                 StructureExercises.reverseALinkedList();
+                break;
+            case 3:
+                StructureExercises.findLandToFarm();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

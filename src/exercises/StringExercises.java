@@ -83,4 +83,23 @@ public class StringExercises {
         String word = "  Enhance the world ";
         System.out.println("Before: '" + word + "', after: '" + word.trim().strip() + "'");
     }
+
+    public static void sumCharacters(String name){
+        String letters = "abcdefghijklmnñopqrstuwxyz";
+        HashMap<String,Integer> map = new HashMap<>();
+
+        for(int i=0; i<26; i++){
+            map.put(String.valueOf(letters.charAt(i)),i+1);
+        }
+
+        name = name.toLowerCase();
+        int lenOfName = name.length();
+        int sum = 0;
+        for(int i=0; i<lenOfName; i++){
+            char c = name.charAt(i);
+            sum+= map.get(String.valueOf(c));
+        }
+
+        System.out.println("The sum of the values for the letters in "+ name+" is: "+sum);
+    }
 }
