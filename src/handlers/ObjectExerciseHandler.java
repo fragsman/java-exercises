@@ -16,6 +16,12 @@ public class ObjectExerciseHandler extends ExerciseHandler{
             case 1:
                 ObjectExercises.sortPeople();
                 break;
+            case 2:
+                ObjectExercises.lambdaExpressionExamples();
+                break;
+            case 3:
+                ObjectExercises.streamExamples();
+                break;
             default:
                 System.out.println("Invalid argument");
         }

@@ -22,6 +22,8 @@ After cloning this, in order to execute it you will be prompted with instruction
 
 ## Object Exercises
 1. Sort objects using the Comparable interface
+2. Lambda Expression Exercises
+3. Streams examples
 
 ## Search Exercises
 1. Find the first non-repeated letter
