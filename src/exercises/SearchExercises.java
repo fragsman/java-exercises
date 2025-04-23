@@ -3,6 +3,10 @@ package exercises;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class SearchExercises {
 
@@ -12,8 +16,7 @@ public class SearchExercises {
      * analyzing if a string or an array of numbers contains certain elements, etc.
      */
 
-    public static void findDuplicates() {
-        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 6, 7, 5, 4, 3, 7, 8, 5, 4, 4, 8, 4, 2, 1, 9));
+    public static void findDuplicates(ArrayList<Integer> numbers) {
         HashMap<Integer, Integer> countMap = new HashMap<>();
         for (Integer number : numbers) {
             if (countMap.containsKey(number)) {
@@ -29,6 +32,15 @@ public class SearchExercises {
             });
         } else
             System.out.println("There are no duplicates in " + numbers.toString());
+    }
+
+    public static void findDuplicatesUsingStreams(ArrayList<Integer> numbers){
+        numbers.stream()
+                .collect(Collectors.groupingBy(Function.identity(),HashMap::new,Collectors.counting()))
+                .forEach((k,v) -> {
+                    if(v>1)
+                        System.out.println("Number "+k+" repeats itself "+v+" times");
+                });
     }
 
     public static void firstNonRepeatedLetter() {
@@ -51,6 +63,28 @@ public class SearchExercises {
             }
             if (!found)
                 System.out.println("There are no non-repeated characters in " + word);
+        }
+        firstNonRepeatedLetterUsingStreams(); //Made by ChatGPT
+    }
+
+    public static void firstNonRepeatedLetterUsingStreams(){
+        ArrayList<String> words = new ArrayList<String>(Arrays.asList("aabccdbeef", "aaxxjdccdj"));
+        for(String word : words){
+            Map<Character,Long> map = word.chars()
+                    .mapToObj(c -> (char)c)
+                    .collect(Collectors.groupingBy(Function.identity(),HashMap::new,Collectors.counting()));
+            char primeraNoRepetida = '\0'; // carácter nulo por si no hay ninguno
+            for (char c : word.toCharArray()) {
+                if (map.get(c) == 1) {
+                    primeraNoRepetida = c;
+                    break;
+                }
+            }
+            if (primeraNoRepetida != '\0') {
+                System.out.println("La primera letra no repetida en \"" + word + "\" es: " + primeraNoRepetida);
+            } else {
+                System.out.println("No hay letras no repetidas en \"" + word + "\"");
+            }
         }
     }
 

@@ -2,6 +2,9 @@ package handlers;
 
 import exercises.SearchExercises;
 import utils.ExerciseType;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SearchExerciseHandler extends ExerciseHandler{
@@ -17,7 +20,9 @@ public class SearchExerciseHandler extends ExerciseHandler{
                 SearchExercises.firstNonRepeatedLetter();
                 break;
             case 2:
-                SearchExercises.findDuplicates();
+                ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 6, 7, 5, 4, 3, 7, 8, 5, 4, 4, 8, 4, 2, 1, 9));
+                SearchExercises.findDuplicates(numbers);
+                SearchExercises.findDuplicatesUsingStreams(numbers);
                 break;
             case 3:
                 SearchExercises.secondLargestNumber();
